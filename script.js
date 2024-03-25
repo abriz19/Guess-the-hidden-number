@@ -4,7 +4,6 @@ let score = 20
 let randomNumber = Math.trunc(Math.random() * 20) + 1
 
 let highscore = Number(document.querySelector('.highscore').textContent)
-document.querySelector('.number').textContent = randomNumber
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value)
   if (!guess) {
@@ -18,6 +17,7 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#900079'
     document.querySelector('.number').style.width = '30rem'
     document.querySelector('.highscore').textContent = highscore
+    document.querySelector('.number').textContent = randomNumber
   } else if (guess > randomNumber) {
     if (score == 0) {
       document.querySelector('.message').textContent = '😐 You lost!'
