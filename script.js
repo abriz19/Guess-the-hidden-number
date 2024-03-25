@@ -18,23 +18,14 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.number').style.width = '30rem'
     document.querySelector('.highscore').textContent = highscore
     document.querySelector('.number').textContent = randomNumber
-  } else if (guess > randomNumber) {
-    if (score == 0) {
-      document.querySelector('.message').textContent = '😐 You lost!'
-      document.querySelector('.message').style.color = '#e03131'
-      document.querySelector('.score').textContent = 0
-    } else {
-      document.querySelector('.message').textContent = 'Too high!'
-      score--
-      document.querySelector('.score').textContent = score
-    }
   } else {
     if (score == 0) {
       document.querySelector('.message').textContent = '😐 You lost!'
 
       document.querySelector('.score').textContent = 0
     } else {
-      document.querySelector('.message').textContent = 'Too low! '
+      document.querySelector('.message').textContent =
+        randomNumber > guess ? 'Too low' : 'Too high'
       score--
       document.querySelector('.score').textContent = score
     }
