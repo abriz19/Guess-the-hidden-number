@@ -21,7 +21,6 @@ document.querySelector('.check').addEventListener('click', function () {
   } else {
     if (score == 0) {
       document.querySelector('.message').textContent = '😐 You lost!'
-
       document.querySelector('.score').textContent = 0
     } else {
       document.querySelector('.message').textContent =
@@ -36,7 +35,7 @@ document.querySelector('.again').addEventListener('click', function () {
   randomNumber = Math.trunc(Math.random() * 20) + 1
   score = 20
   document.querySelector('.guess').value = ''
-  document.querySelector('.number').textContent = randomNumber
+  document.querySelector('.number').textContent = '?'
   document.querySelector('.score').textContent = score
   document.querySelector('.highscore').textContent = highscore
   document.querySelector('body').style.backgroundColor = '#222'
